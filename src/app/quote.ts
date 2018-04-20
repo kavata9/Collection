@@ -1,3 +1,3 @@
 export class Quote {
-    constructor(public id:number, public title:string, public details:string){}
+    constructor(public id:number, public name:string, public details:string){}
 }
