@@ -13,6 +13,10 @@ export class QuoteComponent implements OnInit {
     new Quote(3, 'Paul','Get a smile'),
   ]
 
+  toogleDetails(index){
+    this.quotes[index].showDescription = !this.quotes[index].showDescription;
+  }
+
   constructor() { }
 
   ngOnInit() {
