@@ -7,6 +7,9 @@ import {Quote} from '../quote'
 })
 export class QuoteDetailsComponent implements OnInit {
 
+  upVote : number;
+  downVote : number;
+
   @Input() quote:Quote;
   @Output() isComplete= new EventEmitter<boolean>();
 
@@ -14,8 +17,19 @@ export class QuoteDetailsComponent implements OnInit {
     this.isComplete.emit(complete);
   }
 
-  constructor() { }
-
+  constructor() {
+    this.upVote = 0;
+    this.downVote = 0; 
+  }
+  voteUp(): boolean{
+    this.upVote += 1;
+    return false ;
+  }
+  voteDown(): boolean {
+    this.downVote += 1;
+    return false;
+  }
+  
   ngOnInit() {
   }
 
