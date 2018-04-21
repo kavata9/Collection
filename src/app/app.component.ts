@@ -6,8 +6,8 @@ import {Quote} from './quote'
 })
 export class AppComponent {
   quotes =  [
-    new Quote(1,'Agnes','fly like a butterfly sting like a bee'),
-    new Quote(2,'Liz','be yourself'),
-    new Quote(3, 'Paul','Get a smile'),
+    // new Quote(1,'Agnes','fly like a butterfly sting like a bee'),
+    // new Quote(2,'Liz','be yourself'),
+    // new Quote(3, 'Paul','Get a smile'),
   ]
 }
