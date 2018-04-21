@@ -6,6 +6,6 @@
         <li  id="{{i}}" appStrikethrough>{{quote.name}} due on {{quote.completeDate|date|uppercase}}</li>
         <!-- <li >{{quote.name}}</li>  -->
         <button (click) ='toogleDetails(i)'>Toogle Details</button>
-        <app-quote-details *ngIf="quote.showDescription" [quote]='quote' (isComplete)= 'completeQuote($event,i)'></app-quote-details>
+        <app-quote-details *ngIf="quote.showDescription" [quote]='quote' (isComplete)= 'deleteQuote($event,i)'></app-quote-details>
     </div>
 </ul>
