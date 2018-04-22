@@ -1,24 +1,36 @@
-<div class="container">
+<div class="container-fluid">
     <div class="row">
-<form (ngSubmit)='submitQuote()' #quoteForm='ngForm'>
-  <h3>TYPE YOUR QUOTE BELOW:</h3>
-  <div class="form-group">
-    <label for="quote">Quote:</label>
-    <input name="quote" class="form-control" id="quote" [(ngModel)]="newQuote.name">
+        <form (ngSubmit)='submitQuote()' #quoteForm='ngForm'>
+            <!-- Name Form -->
+            <div class="form-group">
+                <label for="quote">Quote</label>
+                <input type="text"  class="form-control" id="quote" [(ngModel)]="newQuote.quote" name="quote" #quote="ngModel" required>
 
-  </div>
-  <div class="form-group">
-    <label for="author">Author:</label>
-    <input name="author" class="form-control" id="author" [(ngModel)]="newQuote.author">
+                <div [hidden]="quote.valid || quote.pristine" class="alert alert-danger">
+                    <p> Quote is Required</p>
 
-  </div>
-  <div class="form-group">
-    <label for="name">Name:</label>
-    <input name="name" class="form-control" id="name" [(ngModel)]="newQuote.submit">
+                </div>
+            </div>
+            <!-- Author Input -->
+            <div class="form-group">
+                <label for="author">Author</label>
+                <textarea class="form-control" id="author" rows="4" [(ngModel)]="newQuote.author" name="author" #author="ngModel" required></textarea>
+                <div [hidden]="author.valid || author.pristine" class="alert alert-danger">
+                    <p> Author is Required</p>
 
-  </div>
-  <!--Button added-->
-  <button  class="btn btn-outline-success">Submit Quote</button>
-</form>
-</div>
+                </div>
+
+            </div>
+            <!-- Date Input -->
+            <div class="form-group">
+                <label for="name">Name:</label>
+                <input name="name" class="form-control" id="name" [(ngModel)]="newQuote.submit">
+                <!-- <div [hidden]="completeDate.valid || completeDate.pristine" class="alert alert-danger"> -->
+                    <!-- <p> Complete Date is Required</p> -->
+
+                </div>
+
+            <button type="Submit" class="btn btn-success btn-lg">Add Quote</button>
+        </form>
+    </div>
 </div>

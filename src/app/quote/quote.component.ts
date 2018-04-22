@@ -8,9 +8,9 @@ import {Quote} from '../quote'
 export class QuoteComponent implements OnInit {
 
   quotes = [
-    new Quote(1,'Agnes','fly like a butterfly sting like a bee',new Date(2018,3,14) ),
-    new Quote(2,'Liz','be yourself',new Date(2018,3,14) ),
-    new Quote(3, 'Paul','Get a smile',new Date(2018,3,14) ),
+    new Quote(1,'fly like a butterfly sting like a bee','Agnes',new Date(2018,3,22) ),
+    new Quote(2,'be yourself','Liz',new Date(2018,8,14) ),
+    new Quote(3, 'Get a smile','Paul',new Date(2018,12,24) ),
   ]
 
 
