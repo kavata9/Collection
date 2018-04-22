@@ -1,3 +1,19 @@
-<p>{{quote.description}}</p>
-<p>This quote will be completed in {{quote.completeDate|dateCount}}  days</p>
-<button (click) = 'quoteDelete(true)'> Delete Quote </button>
+<p>Author: {{quote.author}}</p>
+<p>Submitted By: {{quote.submit}}</p>
+<p> {{quote.completeDate|dateCount}} days passed since initial quote creation date</p>
+
+<div class="row botttomSapce">
+
+  <div class="col-md-6">
+    <a class="btn btn-success" href="" (click)="voteUp()">LIKE ({{upVote}})
+    </a>
+  </div>
+
+  <div class="col-md-6">
+    <a class="btn btn-danger" href="" (click)="voteDown()">HATE ({{downVote}})
+    </a>
+  </div>
+
+</div>
+
+<button class="btn btn-danger" (click)='quoteDelete(true)'> Delete quote </button>
