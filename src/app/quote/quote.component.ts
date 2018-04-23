@@ -8,8 +8,8 @@ import {Quote} from '../quote'
 export class QuoteComponent implements OnInit {
 
   quotes = [
-    new Quote('Moral indignation is jealousy with a halo',' H. G. Wells ','Agnes' ),
-    new Quote('You got to be careful if you dont know where youre going because you might not get there','Liz','Tush')
+    new Quote('Moral indignation is jealousy with a halo',' H. G. Wells ','Agnes',new Date(2018,0,18) ),
+    new Quote('You got to be careful if you dont know where youre going because you might not get there','Liz','Tush',new Date(2018,0,18))
     // new Quote( 'Get a smile','Paul','liz')
     
   ]
