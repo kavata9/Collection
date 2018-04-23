@@ -18,7 +18,7 @@ This an application where users can create quotes and have those quotes voted on
 Angular 5.
 Run ng serve for a dev server. Navigate to http://localhost:4200/. The app will automatically reload if you change any of the source files.
 ## Support and contact details
-For any clarification contact:https://github.com/kavata9/Collection
+For any clarification contact:https://kavata9.github.io/Collection/
 ### License
 MIT License
 Copyright (c) https://github.com/kavata9/Collection{2018} **{Agnes Musyoka}**
