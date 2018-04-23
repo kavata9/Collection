@@ -8,9 +8,10 @@ import {Quote} from '../quote'
 export class QuoteComponent implements OnInit {
 
   quotes = [
-    new Quote(1,'fly like a butterfly sting like a bee','Agnes',new Date(2018,3,22) ),
-    new Quote(2,'be yourself','Liz',new Date(2018,8,14) ),
-    new Quote(3, 'Get a smile','Paul',new Date(2018,12,24) ),
+    new Quote('Moral indignation is jealousy with a halo',' H. G. Wells ','Agnes' ),
+    new Quote('You got to be careful if you dont know where youre going because you might not get there','Liz','Tush')
+    // new Quote( 'Get a smile','Paul','liz')
+    
   ]
 
 
@@ -23,10 +24,11 @@ export class QuoteComponent implements OnInit {
         this.quotes.splice(index, 1);
         }
         }
-        
+
   addNewQuote(quote) {
     this.quotes.push(quote);
   }
+  
   deleteQuote(isComplete,index){
     if (isComplete){
       let toDelete=confirm('Are you sure you want to delete ${this.quotes[index].name}')
